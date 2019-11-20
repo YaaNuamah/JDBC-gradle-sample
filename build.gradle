@@ -19,10 +19,17 @@ dependencies {
 
 dependencies {
     compile group: 'org.postgresql', name:'postgresql', version: '42.2.8'
+    compile 'org.springframework:spring-core:5.2.1.RELEASE'
+    compile 'org.springframework:spring-beans:5.2.1.RELEASE'
+    compile 'org.springframework:spring-context:5.2.1.RELEASE'
+    compile 'org.springframework:spring-jdbc:5.2.1.RELEASE'
+    runtime 'org.springframework:spring-context:5.2.1.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.0.1.RELEASE'
 }
 
 application {
-    mainClassName = 'io.turntabl.TCMS'
+    mainClassName = 'io.turntabl.beans.JDBCMain'
+
 }
 
 //this will build a start script in
@@ -35,5 +42,5 @@ tasks.startScripts {
 
 //put your package-qualified main class name here
 application {
-    mainClassName = 'io.turntabl.TCMS'
+    mainClassName = 'io.turntabl.beans.JDBCMain'
 }

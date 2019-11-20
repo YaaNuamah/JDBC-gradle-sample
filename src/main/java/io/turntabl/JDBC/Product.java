@@ -1,4 +1,4 @@
-package io.turntabl;
+package io.turntabl.JDBC;
 
 public class Product {
           private String product_name;
